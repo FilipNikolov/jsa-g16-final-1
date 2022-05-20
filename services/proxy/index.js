@@ -8,24 +8,24 @@ const app = express();
 app.use(
     '/api/v1/blog',
     proxy(
-        'http://localhost:10001',
-        { proxyReqPathResolver: (req) => `http://localhost:10001/api/v1/blog${req.url}` }
+        'http://127.0.0.1:10001',
+        { proxyReqPathResolver: (req) => `http://127.0.0.1:10001/api/v1/blog${req.url}` }
     )
 );
 
 app.use(
     '/api/v1/auth',
     proxy(
-        'http://localhost:10002',
-        { proxyReqPathResolver: (req) => `http://localhost:10002/api/v1/auth${req.url}` }
+        'http://127.0.0.1:10002',
+        { proxyReqPathResolver: (req) => `http://127.0.0.1:10002/api/v1/auth${req.url}` }
     )
 );
 
 app.use(
     '/api/v1/storage',
     proxy(
-        'http://localhost:10003',
-        { proxyReqPathResolver: (req) => `http://localhost:10003/api/v1/storage${req.url}` }
+        'http://127.0.0.1:10003',
+        { proxyReqPathResolver: (req) => `http://127.0.0.1:10003/api/v1/storage${req.url}` }
     )
 );
 
