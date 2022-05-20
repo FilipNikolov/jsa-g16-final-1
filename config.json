@@ -9,9 +9,9 @@
         "jwt_key": "secret"
     },
     "db": {
-        "host": "",
-        "username": "",
-        "password": "",
+        "host": "cluster0.c3iyx.mongodb.net",
+        "username": "dev",
+        "password": "RY4O3rRYjwyDE3dh",
         "dbname": "g19"
     }
 }
