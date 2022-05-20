@@ -44,6 +44,8 @@ app.use(
 
 const PORT = process.env.PORT || config.get('services').proxy.port;
 
+console.log('Proxy starting port', PORT);
+
 app.listen(PORT, err => {
     if(err) {
         return console.log(err);
