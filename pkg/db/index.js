@@ -9,10 +9,10 @@ const dbname = config.get('db').dbname;
 let DSN = `mongodb+srv://${username}:${password}@${host}/${dbname}?retryWrites=true&w=majority`;
 
 mongoose.connect(
-    DSN, 
-    {useNewUrlParser: true, useUnifiedTopology: true},
+    DSN,
+    // {useNewUrlParser: true, useUnifiedTopology: true},
     err => {
-        if(err) {
+        if (err) {
             return console.log('Could not connect to DB:', err);
         }
         console.log('Successfully conneted to DB');

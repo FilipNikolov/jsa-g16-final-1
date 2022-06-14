@@ -20,12 +20,12 @@ const Login = () => {
                     'content-type': 'application/json'
                 }
             });
-            if(!res.ok) {
+            if (!res.ok) {
                 throw 'Error logging in';
             }
             let data = await res.json();
             localStorage.setItem('jwt', data.token);
-        } catch(err) {
+        } catch (err) {
             alert(err);
         }
     };
@@ -41,12 +41,12 @@ const Login = () => {
         <form onSubmit={submit}>
             <label>
                 <span>Username (email)</span>
-                <input type="email" name="email" value={formData.email} onChange={inputChange}/>
+                <input type="email" name="email" value={formData.email} onChange={inputChange} />
             </label>
             <br />
             <label>
                 <span>Password</span>
-                <input type="password" name="password" value={formData.password} onChange={inputChange}/>
+                <input type="password" name="password" value={formData.password} onChange={inputChange} />
             </label>
             <br />
             <br />

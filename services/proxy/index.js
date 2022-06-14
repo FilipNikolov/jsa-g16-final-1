@@ -37,17 +37,17 @@ app.use(
 //     )
 // );
 
-app.use(
-    '/', 
-    express.static(path.join(__dirname, '/../../web/build'))
-);
+// app.use(
+//     '/', 
+//     express.static(path.join(__dirname, '/../../web/build'))
+// );
 
 const PORT = process.env.PORT || config.get('services').proxy.port;
 
 console.log('Proxy starting port', PORT);
 
 app.listen(PORT, err => {
-    if(err) {
+    if (err) {
         return console.log(err);
     }
     console.log(`Service started on port ${PORT}`);
